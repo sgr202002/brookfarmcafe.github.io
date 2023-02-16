@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brook Farm Cafe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@300;600&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    body {
+        color: white;
+        background-color: black;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    header::before {
+
+        background: url('https://images.wallpaperscraft.com/image/single/coffee_book_windowsill_130911_1920x1080.jpg');
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0px;
+        left: 0;
+        opacity: 1.5;
+        background-attachment: fixed;
+        background-size: cover;
+        
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        font-family: 'Bebas Neue';
+        letter-spacing: 3px;
+        width: 88%;
+    }
+
+    .navbar ul li {
+        border: 2px #c39d41;
+        margin: 0px 26px;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+
+    }
+
+
+
+    .navbar li a {
+        font-size: 22px;
+        padding: 0px 0px;
+        color: white;
+        text-decoration: none;
+
+
+    }
+
+    .navbar li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+
+
+    .logo img {
+
+        float: left;
+        height: 103px;
+        filter: invert(100%);
+        position: absolute;
+        margin: -16px 0px;
+        top: 0px;
+
+    }
+
+    input[type='search'] {
+        width: 160px;
+        height: 23px;
+        border-radius: 6px;
+        border: 2px solid #817c70;
+        position: absolute;
+        top: 14px;
+
+    }
+
+    .right {
+        display: flex;
+        justify-content: end;
+
+    }
+
+    .right img {
+        height: 20px;
+        position: relative;
+        top: -52px;
+        right: 164px;
+        filter: invert(100%);
+    }
+
+
+
+    .h1 {
+        margin-top: 14%;
+    }
+
+
+    .heading1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 13%;
+        letter-spacing: 6px;
+        text-shadow: 6px 4px black;
+
+
+    }
+
+    .heading2 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 60px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-shadow: 6px 4px black;
+    }
+
+    .heading3 {
+        /* font-family: 'Bebas Neue', cursive; */
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px black;
+    }
+
+    .tablebooking {
+        margin: 143px -9px;
+    border-top: 1px solid #b5ae9d;
+    padding: 12px 15px;
+    width: 99%;
+    /* top: 0px; */
+    left: 0px;
+    height: 85vh;
+    border-bottom: 1px solid gray;
+}
+    
+
+    #reservation {
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 2px;
+        color: #b5ae9d;
+
+    }
+
+    /* hr {
+        width: 10%;
+        position: absolute;
+        left: 190px;
+        top: 185vh;
+        border: 1px solid #b5ae9d;
+    } */
+
+    /* hr.hr2{
+    border: 1px solid #c39d41;
+    position: absolute;
+    top: 99%;
+    width: 100%;
+    left: 0px;
+  
+} */
+    .booking {
+        text-align: left;
+        color: #b5ae9d;
+        font-size: 40px;
+    }
+
+    .form1 input[type=text] {
+        border: 1px solid #b5ae9d;
+        color: white;
+        height: 33%;
+        display: inline-block;
+        margin: 16px 100px;
+        height: 39px;
+        width: 278px;
+        border-radius: 2px;
+        background-color: transparent;
+        padding: 8px 8px;
+        box-sizing: border-box;
+
+    }
+
+    #submitbtn {
+        background-color: #bdbaba;
+        ;
+        color: black;
+        font-size: 20px;
+        padding: 8px 8px;
+        margin: 0px auto;
+        border-radius: 27px;
+        display: block;
+    }
+
+    #text-area {
+        width: 87%;
+        height: 140px;
+        margin: 26px 5%;
+        background-color: transparent;
+        border: 1px solid #7c6e6e;
+        /* border-radius: 10px; */
+        color: white;
+        box-sizing: border-box;
+        padding: 8px 8px;
+        font-size: 16px;
+    }
+
+    #text-area::placeholder {
+        font-size: 15px;
+        /* padding: 8px 8px; */
+
+
+    }
+
+    /* best selling part  */
+
+    .best-selling {
+
+        display: grid;
+        grid-template-columns: repeat(5, 200px);
+        grid-gap: 50px;
+        /* border: 2px solid white; */
+        background-color: black;
+        height: 550px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .bestmeals img {
+        border: 1px solid #b5ae9d;
+        border-radius: 10px;
+        height: 182px;
+        width: 200px;
+        cursor: pointer;
+       transition: 0.3s ease-in-out;
+    
+    }
+    .bestmeals img:hover{
+        transform: scale(1.1);
+    }
+
+    #best-selling-heading1 {
+        font-size: 40px;
+        color: #b5ae9d;
+        margin-left: 20px;
+        margin-top: -7vh;
+    }
+
+    #bestmeals {
+        font-size: 20px;
+    }
+
+    .bestmeals h3 {
+        font-size: 22px;
+        color: #b5ae9d;
+        margin: 10px 35px;
+        text-align: center;
+
+    }
+
+    /* menu */
+    #menu-bg::before {
+        background: url('https://i.pinimg.com/originals/a1/55/14/a15514a59abc0ca91bbeeb6c155a3d69.jpg');
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 96%;
+        z-index: -1;
+        opacity: 0.6;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        left: 0;
+    }
+
+    #food-menu {
+     /* border: 2px solid white; */
+    display: grid;
+    grid-template-columns: repeat(3, 218px);
+    grid-gap: 6%;
+    justify-content: space-around;
+    margin: 119px 0px;
+}
+
+
+    .menu {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    /* food menu heading */
+    #our-menu {
+        display: flex;
+    font-size: 46px;
+    color: #b5ae9d;
+    text-shadow: 2px 1px 2px white;
+    position: relative;
+    top: 43px;
+    }
+
+    #food-menu h3 {
+        color: white;
+        white-space: nowrap;
+    }
+
+    .menu img {
+        height: 63px;
+        width: 60px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    /* contact us CSS */
+    .contact-us::before{
+        content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: #1a1818;
+    height: 100%;
+    width: 100%;
+    }
+    .contact-us{
+        /* border: 1px solid grey; */
+    position: relative;
+    margin-top: 190px;
+    width: 99%;
+    background-color: black;
+    }
+    .form-contact{
+     /* border: 1px solid white; */
+     height: 84vh;
+    }
+    /* contact us heading */
+    .contact-heading h1{
+        font-size: 40px;
+       color: #b5ae9d;
+       margin-left: 20px;
+
+    }
+    .form-contact input[type="text"]{
+        border: 1px solid #b5ae9d;
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 16px 10px;
+    height: 46px;
+    width: 32%;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    }
+    #name-email{
+        display: flex;
+        justify-content: center;
+        width: 94%;
+    }
+    #subject{
+     width: 62%;
+     margin-left: 240px;
+     margin-bottom: 35px;
+    }
+    #contact-textarea{
+        width: 62%;
+    height: 26vh;
+    margin-left: 237px;
+    background-color: transparent;
+    }
+    .form-contact input[type="button"]{
+        background-color: #bdbaba;
+    color: black;
+    font-size: 20px;
+    padding: 8px 8px;
+    margin: 45px auto;
+    border-radius: 27px;
+    display: block;
+}
+
+/* footer */
+footer{
+    color: white;
+    display: flex;
+    position: absolute;
+    background-color: #202020;
+    width: 100%;
+    left: 0;
+}
+.footer-top{
+    display:flex;
+    margin: 0px auto;
+}
+.footer-list {
+    margin: 50px 18px;
+    
+}
+#socials{
+    transition: 0.5s ease-in-out;
+}
+#socials a:hover{
+    transform: scale(1.2);
+    
+}
+.footer-list h4{
+    text-align: start;
+    font-size: 30px;
+    margin: 0px 37px;
+    margin-left: 15px
+}
+/* .social-media h4{
+    text-align: start;
+    font-size: 30px;
+    margin: 0px 37px;
+} */
+.footer-list p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    padding: 5px 0px;
+}
+
+.footer-list ul{
+    margin: 25px 0px;
+    display: grid;
+    grid-gap: 22px;
+}
+
+.footer-list ul li{
+list-style: none;
+}
+.footer-top ul li a{
+color: white;
+text-decoration: none;
+font-size: 15px;
+margin-left: 4px;
+font-family: "Open Sans", sans-serif;
+}
+.footer-form input[type="email"]{
+    background-color: white;
+    height: 20px;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin: 0px 16px;
+    padding: 2px;
+    margin-right: 0px;
+    border-radius: 3px;
+}
+
+.footer-form input[type="submit"]{
+    background-color: #bd2f2f;
+    height: 25px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin: 28px 0px;
+    padding: 2px;
+    color: white;
+}
+/* social media */
+.fa{
+    margin: 22px 6px;
+    padding: 5px;
+  font-size: 25px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  
+  
+}
+.fa-facebook{
+    background: #524c4c;
+    color: #fff;
+    border-radius: 20%;
+    
+}
+
+.fa-twitter{
+    background: #524c4c;
+    color: #fff;
+    border-radius: 20%;
+}
+
+
+.fa-instagram{
+    background: #524c4c;
+    color: #fff;
+    border-radius: 20%;
+}
+
+.fa-linkedin{
+    background: #524c4c;
+    color: #fff;
+    border-radius: 20%;
+}
+.copyright{
+    position: relative;
+    top: 53vh;
+    background-color: black;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    /* width: 1250px; */
+}
+
+#credit{
+    color: white;
+    position: relative;
+    top: 52vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+/* responsive ------------------------------------------------------------------------------------*/
+@media only screen and (min-width:360px ) and (max-width:374px)
+{
+    input[type='search'] {
+    width: 109px;
+    height: 23px;
+    border-radius: 7px;
+    border: 2px solid #817c70;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+/* navbar */
+    header::before {
+        background: url('https://images.wallpaperscraft.com/image/single/coffee_book_windowsill_130911_1920x1080.jpg');
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0px;
+        left: 0;
+        opacity: 1.5;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+}
+.logo img {
+    float: left;
+    height: 103px;
+    filter: invert(100%);
+    position: absolute;
+    margin: -17px -16px;
+    top: 0px;
+}
+.right img {
+    height: 20px;
+    position: relative;
+    top: -52px;
+    right: 164px;
+    display: none;
+}
+    
+
+    .navbar {
+        display: flex;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 4px;
+}
+    .navbar ul {
+        list-style: none;
+    position: relative;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+    .navbar ul li {
+        border: 2px #c39d41;
+    margin: 2px 0px;
+    text-align: center;
+}
+    
+    .navbar li a {
+        font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    text-shadow: 4px 4px 0px #4a3434;
+}
+/* heading */
+.heading1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 47px;
+    text-align: center;
+    margin-top: 16%;
+    letter-spacing: 6px;
+    text-shadow: 6px 4px black;
+    /* margin: 0px 0px; */
+    /* width: 86%; */
+    margin-bottom: -3vh;
+}
+.heading2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow: 6px 4px black;
+    /* width: 86%; */
+}
+.heading3 {
+       /* font-family: 'Bebas Neue', cursive; */
+       font-size: 17px;
+    text-align: center;
+    letter-spacing: 4px;
+    /* text-shadow: 2px 2px black; */
+    /* width: 86%; */
+    position: relative;
+    bottom: 14px;
+}
+
+
+
+/* tablebooking */
+.tablebooking {
+    margin: 118px -9px;
+    border-top: 0px solid #b5ae9d;
+    padding: 12px 15px;
+    width: 96%;
+    /* top: 0px; */
+    left: 0px;
+    border-bottom: 0px solid gray;
+    margin-bottom: 64px;
+}
+.form1 input[type=text] {
+    border: 1px solid rgb(184, 175, 175);
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 16px 18px;
+    height: 36px;
+    width: 242px;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+
+
+
+#text-area {
+    width: 242px;
+    height: 135px;
+    margin: 14px 17px;
+    background-color: transparent;
+    border: 1px solid #7c6e6e;
+    /* border-radius: 10px; */
+    color: white;
+    box-sizing: border-box;
+    padding: 8px 8px;
+    font-size: 16px;
+}
+#submitbtn {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 17px;
+    padding: 8px 8px;
+    margin: 0px 69px;
+    border-radius: 27px;
+    display: block;
+}
+
+
+
+/* best meals  */
+
+
+.best-selling {
+    display: grid;
+    grid-template-columns: repeat(2, 162px);
+    grid-gap: 0px;
+    /* border: 2px solid white; */
+    background-color: black;
+    height: 132vh;
+    /* width: 89%; */
+    grid-row-gap: 33px;
+}
+#best-selling-heading1 {
+    font-size: 40px;
+    color: #b5ae9d;
+    margin-left: 20px;
+    margin-top: 33vh;}
+
+#first-img{
+    position: relative;
+    top: 12px;
+}
+
+.bestmeals img {
+    border: 1px solid #b5ae9d;
+    border-radius: 10px;
+    width: 113px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 102px;
+    margin: 0px 19px;
+}
+.bestmeals h3 {
+    font-size: 22px;
+    color: #b5ae9d;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+/* fod-menu */
+#menu-bg::before {
+   
+    margin-top: 35%;
+    height: 125vh;
+}
+#our-menu{
+    top: 163px;
+}
+#food-menu {
+    /* border: 2px solid white; */
+    display: grid;
+    grid-template-columns: repeat(3, 78px);
+    grid-gap: 7%;
+    /* justify-content: flex-start; */
+    margin: 245px 0px;
+    /* margin-left: 11px; */
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    margin-bottom: 0px;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 124px;
+    width: 86px;
+    text-align: center;
+    border: 1px solid white;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 8px 17px;
+}
+
+.menu img {
+    height: 63px;
+    width: 64px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+#food-menu h3 {
+    color: white;
+    white-space: break-spaces;
+    margin: 0px -10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* contact us */
+.contact-us {
+    /* border: 1px solid grey; */
+    position: relative;
+    margin-top: 300px;
+    /* width: 99%; */
+    background-color: black;
+}
+.form-contact {
+    height: 55vh;
+}
+#name-email {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+}
+#subject {
+    width: 66%;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+#contact-textarea {
+    width: 66%;
+    height: 16vh;
+    margin-left: 5px;
+    background-color: transparent;
+}
+.form-contact input[type="text"] {
+    border: 1px solid #b5ae9d;
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 11px 5px;
+    height: 45px;
+    width: 70%;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+.form-contact input[type="button"] {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 20px;
+    padding: 8px 8px;
+    margin: 10px auto;
+    border-radius: 27px;
+    display: block;
+}
+
+/* footer  */
+footer {
+    color: white;
+    display: flex;
+    position: absolute;
+    background-color: #202020;
+    width: 100%;
+    margin-top: 10vh;
+}
+.footer-top {
+    display: flex;
+    margin: 0px 0px;
+    flex-direction: column;
+}
+.footer-list {
+    margin: 7px 34px;
+}
+.footer-list p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    padding: 5px 0px;
+}
+.footer-list h4 {
+    text-align: start;
+    font-size: 29px;
+    margin: 0px -9px;
+}
+.footer-list ul {
+    margin: 18px -39px;
+    display: grid;
+    grid-gap: 18px;
+}
+.footer-top ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 4px;
+    font-family: "Open Sans", sans-serif;
+}
+#socials {
+    transition: 0.5s ease-in-out;
+}
+.fa {
+    margin: 23px 11px;
+    padding: 5px;
+    font-size: 25px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-form input[type="email"] {
+    background-color: white;
+    height: 20px;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin: 0px 0px;
+    padding: 2px;
+    margin-left: -17px;
+    border-radius: 3px;
+}
+.footer-form input[type="submit"] {
+    background-color: #bd2f2f;
+    height: 25px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin: 28px 0px;
+    padding: 2px;
+    color: white;
+}
+.copyright {
+    position: relative;
+    top: 114vh;
+    background-color: #000000;
+    height: 3vh;
+    display: flex;
+    /* align-items: start; */
+    font-family: sans-serif;
+    font-size: 13px;
+    /* width: 312px; */
+    /* color: white; */
+    /* z-index: -1; */
+    justify-content: center;
+    /* right: -4px; */
+}
+#credit {
+    color: white;
+    position: relative;
+    top: 113vh;
+    text-align: center;
+    font-family: monospace;
+    right: 8px;
+}
+}
+
+/* search  */
+@media only screen and (min-width:375px ) and (max-width:380px)
+{
+input[type='search'] {
+    width: 109px;
+    height: 23px;
+    border-radius: 7px;
+    border: 2px solid #817c70;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+/* navbar */
+    header::before {
+        background: url('https://images.wallpaperscraft.com/image/single/coffee_book_windowsill_130911_1920x1080.jpg');
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0px;
+        left: 0;
+        opacity: 1.5;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+}
+.logo img {
+    float: left;
+    height: 103px;
+    filter: invert(100%);
+    position: absolute;
+    margin: -17px -16px;
+    top: 0px;
+}
+.right img {
+    height: 20px;
+    position: relative;
+    top: -52px;
+    right: 164px;
+    display: none;
+}
+    
+
+    .navbar {
+        display: flex;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 4px;
+}
+    .navbar ul {
+        list-style: none;
+    position: relative;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+    .navbar ul li {
+        border: 2px #c39d41;
+    margin: 2px 0px;
+    text-align: center;
+}
+    
+    .navbar li a {
+        font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    text-shadow: 4px 4px 0px #4a3434;
+}
+/* heading */
+.heading1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 47px;
+    text-align: center;
+    margin-top: 16%;
+    letter-spacing: 6px;
+    text-shadow: 6px 4px black;
+    /* margin: 0px 0px; */
+    /* width: 86%; */
+    margin-bottom: -3vh;
+}
+.heading2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow: 6px 4px black;
+    /* width: 86%; */
+}
+.heading3 {
+       /* font-family: 'Bebas Neue', cursive; */
+       font-size: 17px;
+    text-align: center;
+    letter-spacing: 4px;
+    /* text-shadow: 2px 2px black; */
+    /* width: 86%; */
+    position: relative;
+    bottom: 14px;
+}
+
+
+
+/* tablebooking */
+.tablebooking {
+    margin: 118px -9px;
+    border-top: 0px solid #b5ae9d;
+    padding: 12px 15px;
+    width: 96%;
+    /* top: 0px; */
+    left: 0px;
+    border-bottom: 0px solid gray;
+    margin-bottom: 64px;
+}
+.form1 input[type=text] {
+    border: 1px solid rgb(184, 175, 175);
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 16px 18px;
+    height: 36px;
+    width: 242px;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+
+
+
+#text-area {
+    width: 242px;
+    height: 135px;
+    margin: 14px 17px;
+    background-color: transparent;
+    border: 1px solid #7c6e6e;
+    /* border-radius: 10px; */
+    color: white;
+    box-sizing: border-box;
+    padding: 8px 8px;
+    font-size: 16px;
+}
+#submitbtn {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 17px;
+    padding: 8px 8px;
+    margin: 0px 69px;
+    border-radius: 27px;
+    display: block;
+}
+
+
+
+/* best meals  */
+
+
+.best-selling {
+    display: grid;
+    grid-template-columns: repeat(2, 162px);
+    grid-gap: 0px;
+    /* border: 2px solid white; */
+    background-color: black;
+    height: 132vh;
+    /* width: 89%; */
+    grid-row-gap: 33px;
+}
+#best-selling-heading1 {
+    font-size: 40px;
+    color: #b5ae9d;
+    margin-left: 20px;
+    margin-top: 33vh;}
+
+#first-img{
+    position: relative;
+    top: 12px;
+}
+
+.bestmeals img {
+    border: 1px solid #b5ae9d;
+    border-radius: 10px;
+    width: 113px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 102px;
+    margin: 0px 19px;
+}
+.bestmeals h3 {
+    font-size: 22px;
+    color: #b5ae9d;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+/* fod-menu */
+#menu-bg::before {
+   
+    margin-top: 35%;
+    height: 125vh;
+}
+#our-menu{
+    top: 163px;
+}
+#food-menu {
+    /* border: 2px solid white; */
+    display: grid;
+    grid-template-columns: repeat(3, 78px);
+    grid-gap: 7%;
+    /* justify-content: flex-start; */
+    margin: 245px 0px;
+    /* margin-left: 11px; */
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    margin-bottom: 0px;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 124px;
+    width: 86px;
+    text-align: center;
+    border: 1px solid white;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 8px 17px;
+}
+
+.menu img {
+    height: 63px;
+    width: 64px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+#food-menu h3 {
+    color: white;
+    white-space: break-spaces;
+    margin: 0px -10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* contact us */
+.contact-us {
+    /* border: 1px solid grey; */
+    position: relative;
+    margin-top: 190px;
+    /* width: 99%; */
+    background-color: black;
+}
+.form-contact {
+    height: 55vh;
+}
+#name-email {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+}
+#subject {
+    width: 66%;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+#contact-textarea {
+    width: 66%;
+    height: 16vh;
+    margin-left: 5px;
+    background-color: transparent;
+}
+.form-contact input[type="text"] {
+    border: 1px solid #b5ae9d;
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 11px 5px;
+    height: 45px;
+    width: 70%;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+.form-contact input[type="button"] {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 20px;
+    padding: 8px 8px;
+    margin: 10px auto;
+    border-radius: 27px;
+    display: block;
+}
+
+/* footer  */
+footer {
+    color: white;
+    display: flex;
+    position: absolute;
+    background-color: #202020;
+    width: 100%;
+    margin-top: 10vh;
+}
+.footer-top {
+    display: flex;
+    margin: 0px 0px;
+    flex-direction: column;
+}
+.footer-list {
+    margin: 7px 34px;
+}
+.footer-list p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    padding: 5px 0px;
+}
+.footer-list h4 {
+    text-align: start;
+    font-size: 29px;
+    margin: 0px -9px;
+}
+.footer-list ul {
+    margin: 18px -39px;
+    display: grid;
+    grid-gap: 18px;
+}
+.footer-top ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 4px;
+    font-family: "Open Sans", sans-serif;
+}
+#socials {
+    transition: 0.5s ease-in-out;
+}
+.fa {
+    margin: 23px 11px;
+    padding: 5px;
+    font-size: 25px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-form input[type="email"] {
+    background-color: white;
+    height: 20px;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin: 0px 0px;
+    padding: 2px;
+    margin-left: -17px;
+    border-radius: 3px;
+}
+.footer-form input[type="submit"] {
+    background-color: #bd2f2f;
+    height: 25px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin: 28px 0px;
+    padding: 2px;
+    color: white;
+}
+.copyright {
+    position: relative;
+    top: 125vh;
+    background-color: #000000;
+    height: 3vh;
+    display: flex;
+    /* align-items: start; */
+    font-family: sans-serif;
+    font-size: 13px;
+    /* width: 312px; */
+    /* color: white; */
+    /* z-index: -1; */
+    justify-content: center;
+    /* right: -4px; */
+}
+#credit {
+    color: white;
+    position: relative;
+    top: 124vh;
+    text-align: center;
+    font-family: monospace;
+    right: 8px;
+}
+}
+
+
+
+@media only screen and (min-width:390px ) and (max-width:415px){
+    input[type='search'] {
+    width: 109px;
+    height: 23px;
+    border-radius: 7px;
+    border: 2px solid #817c70;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+/* navbar */
+    header::before {
+        background: url('https://images.wallpaperscraft.com/image/single/coffee_book_windowsill_130911_1920x1080.jpg');
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0px;
+        left: 0;
+        opacity: 1.5;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+}
+.logo img {
+    float: left;
+    height: 103px;
+    filter: invert(100%);
+    position: absolute;
+    margin: -17px -16px;
+    top: 0px;
+}
+.right img {
+    height: 20px;
+    position: relative;
+    top: -52px;
+    right: 164px;
+    display: none;
+}
+    
+
+    .navbar {
+        display: flex;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 4px;
+}
+    .navbar ul {
+        list-style: none;
+    position: relative;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+    .navbar ul li {
+        border: 2px #c39d41;
+    margin: 2px 0px;
+    text-align: center;
+}
+    
+    .navbar li a {
+        font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    text-shadow: 4px 4px 0px #4a3434;
+}
+/* heading */
+.heading1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 47px;
+    text-align: center;
+    margin-top: 16%;
+    letter-spacing: 6px;
+    text-shadow: 6px 4px black;
+    /* margin: 0px 0px; */
+    /* width: 86%; */
+    margin-bottom: -3vh;
+}
+.heading2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow: 6px 4px black;
+    /* width: 86%; */
+}
+.heading3 {
+       /* font-family: 'Bebas Neue', cursive; */
+       font-size: 17px;
+    text-align: center;
+    letter-spacing: 4px;
+    /* text-shadow: 2px 2px black; */
+    /* width: 86%; */
+    position: relative;
+    bottom: 14px;
+}
+
+
+
+/* tablebooking */
+.tablebooking {
+    margin: 38vh -9px;
+    border-top: 0px solid #b5ae9d;
+    padding: 12px 15px;
+    width: 96%;
+    /* top: 0px; */
+    left: 0px;
+    border-bottom: 0px solid gray;
+    margin-bottom: 64px;
+}
+.form1 input[type=text] {
+    border: 1px solid rgb(184, 175, 175);
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 16px 18px;
+    height: 36px;
+    width: 242px;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+
+
+
+#text-area {
+    width: 242px;
+    height: 135px;
+    margin: 14px 17px;
+    background-color: transparent;
+    border: 1px solid #7c6e6e;
+    /* border-radius: 10px; */
+    color: white;
+    box-sizing: border-box;
+    padding: 8px 8px;
+    font-size: 16px;
+}
+#submitbtn {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 17px;
+    padding: 8px 8px;
+    margin: 0px 69px;
+    border-radius: 27px;
+    display: block;
+}
+
+
+
+/* best meals  */
+
+
+.best-selling {
+    display: grid;
+    grid-template-columns: repeat(2, 162px);
+    grid-gap: 0px;
+    /* border: 2px solid white; */
+    background-color: black;
+    height: 132vh;
+    /* width: 89%; */
+    grid-row-gap: 33px;
+}
+#best-selling-heading1 {
+    font-size: 40px;
+    color: #b5ae9d;
+    margin-left: 20px;
+    margin-top: 18vh;}
+
+#first-img{
+    position: relative;
+    top: 12px;
+}
+
+.bestmeals img {
+    border: 1px solid #b5ae9d;
+    border-radius: 10px;
+    width: 113px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 102px;
+    margin: 0px 19px;
+}
+.bestmeals h3 {
+    font-size: 22px;
+    color: #b5ae9d;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+/* fod-menu */
+#menu-bg::before {
+   
+    /* margin-top: 35%; */
+    height: 99vh;
+}
+#our-menu{
+    top: 40px;
+}
+#food-menu {
+    /* border: 2px solid white; */
+    display: grid;
+    grid-template-columns: repeat(3, 78px);
+    grid-gap: 7%;
+    /* justify-content: flex-start; */
+    margin: 90px 0px;
+    /* margin-left: 11px; */
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    margin-bottom: 0px;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 124px;
+    width: 86px;
+    text-align: center;
+    border: 1px solid white;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 8px 17px;
+}
+
+.menu img {
+    height: 63px;
+    width: 64px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+#food-menu h3 {
+    color: white;
+    white-space: break-spaces;
+    margin: 0px -10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* contact us */
+.contact-us {
+    /* border: 1px solid grey; */
+    position: relative;
+    margin-top: 30vh;
+    /* width: 99%; */
+    background-color: black;
+}
+.form-contact {
+    height: 55vh;
+}
+#name-email {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+}
+#subject {
+    width: 66%;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+#contact-textarea {
+    width: 66%;
+    height: 16vh;
+    margin-left: 5px;
+    background-color: transparent;
+}
+.form-contact input[type="text"] {
+    border: 1px solid #b5ae9d;
+    color: white;
+    height: 33%;
+    display: inline-block;
+    margin: 11px 5px;
+    height: 45px;
+    width: 70%;
+    border-radius: 2px;
+    background-color: transparent;
+    padding: 8px 8px;
+    box-sizing: border-box;
+}
+.form-contact input[type="button"] {
+    background-color: #bdbaba;
+    color: black;
+    font-size: 20px;
+    padding: 8px 8px;
+    margin: 10px auto;
+    border-radius: 27px;
+    display: block;
+}
+
+/* footer  */
+footer {
+    color: white;
+    display: flex;
+    position: absolute;
+    background-color: #202020;
+    width: 100%;
+    margin-top: 5vh;
+}
+.footer-top {
+    display: flex;
+    margin: 0px 0px;
+    flex-direction: column;
+}
+.footer-list {
+    margin: 7px 34px;
+}
+.footer-list p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    padding: 5px 0px;
+}
+.footer-list h4 {
+    text-align: start;
+    font-size: 29px;
+    margin: 0px -9px;
+}
+.footer-list ul {
+    margin: 18px -39px;
+    display: grid;
+    grid-gap: 18px;
+}
+.footer-top ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 4px;
+    font-family: "Open Sans", sans-serif;
+}
+#socials {
+    transition: 0.5s ease-in-out;
+}
+.fa {
+    margin: 23px 11px;
+    padding: 5px;
+    font-size: 25px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-form input[type="email"] {
+    background-color: white;
+    height: 20px;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin: 0px 0px;
+    padding: 2px;
+    margin-left: -17px;
+    border-radius: 3px;
+}
+.footer-form input[type="submit"] {
+    background-color: #bd2f2f;
+    height: 25px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin: 28px 0px;
+    padding: 2px;
+    color: white;
+}
+.copyright {
+    position: relative;
+    top: 97vh;
+    background-color: #000000;
+    height: 3vh;
+    display: flex;
+    /* align-items: start; */
+    font-family: sans-serif;
+    font-size: 13px;
+    /* width: 312px; */
+    /* color: white; */
+    /* z-index: -1; */
+    justify-content: center;
+    /* right: -4px; */
+}
+#credit {
+    color: white;
+    position: relative;
+    top: 96vh;
+    text-align: center;
+    font-family: monospace;
+    right: 8px;
+}
+}
+
+@media only screen and (min-width:412px ) and (max-width:414px) {
+.copyright{
+    top:89vh;
+}
+#credit{
+    top:88vh;
+}
+}
+@media only screen and (min-width:414px ) and (max-width:415px) {
+.copyright{
+    top:91vh;
+}
+#credit{
+    top:90vh;
+}
+}
+</style>
+
+<body>
+    <section>
+        <header>
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">Book Your Table</a> </li>
+                    <li><a href="#"> Best Selling</a> </li>
+                    <li><a href="#">Cafe Menu</a> </li>
+                    <li><a href="#">Contact us</a> </li>
+                    <li><a href="#"> About</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="../images/kisspng-cafe-coffee-logo-coffees-5ad1b3224015f6.5106121215236923222625.png" alt="">
+            </div>
+            <div class="right">
+                <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png"
+                    alt=""><input type="search" name="search " id="" placeholder="Eg: Coffee">
+            </div>
+        </header>
+
+
+        <div>
+            <div class="h1">
+
+
+                <h1 class="heading1">WELCOME TO BROOK FARM CAFE</h1>
+
+                <h1 class="heading2">Since 1991</h1>
+                <h3 class="heading3">LONDON | UNITED KINGDOM</h3>
+            </div>
+            <!-- <div class="line">
+           <hr class="hr1"> -->
+
+        </div>
+        </div>
+    </section>
+    <div class="tablebooking">
+
+        <div class="container2">
+            <div>
+                <!-- <hr class="hr2"> -->
+                <h1 id="reservation">RESERVATION</h1>
+            </div>
+
+            <div>
+                <h1 class="booking">Book a Table</h1>
+            </div>
+        </div>
+        <div class="form1">
+            <form action="backend.php">
+                <input type="text" name="name" id="" placeholder="Your Name">
+                <input type="text" name="name" id="" placeholder="Your Email">
+                <input type="text" name="name" id="" placeholder="Your phone number">
+                <input type="text" name="name" id="" placeholder="Date">
+                <input type="text" name="name" id="" placeholder="Time">
+                <input type="text" name="name" id="" placeholder="# of people">
+                <textarea name="" id="text-area" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="button" value="Book your Table" id="submitbtn">
+            </form>
+        </div>
+    </div>
+    <div>
+        <h1 id="best-selling-heading1">Our Best Selling Foods & Drinks</h1>
+    </div>
+    <div class="best-selling">
+
+        <div class="bestmeals" id="first-img"> <img
+                src="https://funmoneymom.com/wp-content/uploads/2021/03/Chocolate-Milkshake-square.jpg" alt="error"
+                height="182px" width="200pxpx">
+            <h3>Chocolate Milkshake</h3>
+        </div>
+        <div class="bestmeals">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-nGIdjXy0qVSjToZGLN9DzVU-t6yW0gXhMNj1Vn-IcvC7NzAr_2XujrcRyJlzFayp0s&usqp=CAU"
+                alt="" height="182px" width="200px">
+            <h3>Cold Coffee</h3>
+        </div>
+        <div class="bestmeals" id="bestmeals"><img
+                src="https://hirasweets.com/wp-content/uploads/2020/06/Hot-coffee.jpg" alt="" height="182px"
+                width="200px">
+            <h3>Cappuccino</h3>
+        </div>
+        <div class="bestmeals
+    "> <img src="https://coffeeaffection.com/wp-content/uploads/2021/04/mocha-cappuccino-500x500.jpg" width="200px"
+                height="182px">
+            <h3>Hot chocolate</h3>
+        </div>
+        <div class="bestmeals
+    "><img src="https://static.toiimg.com/thumb/75758092.cms?imgsize=1439590&width=509&height=340" height="182px"
+                width="200px">
+            <h3>Truffle Cake</h3>
+        </div>
+
+        <div class="bestmeals
+                "><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQone0R23wCaPIDzYE15nzl2mlhQPmGrAbtdQ&usqp=CAU"
+                alt="" height="182px" width="200px">
+            <h3>Oreo Shake</h3>
+        </div>
+        <div class="bestmeals
+                "><img src="\images\download1.jpg"
+                width="200px" height="182px">
+            <h3>Black Forest Cake</h3>
+        </div>
+        <div class="bestmeals
+                "><img
+                src="https://www.foodandwine.com/thmb/PBjYB846GpTv5DXiLuOoz0j_ho0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/molten-chocolate-cake-FT-RECIPE0220-0778308bb6104cf0970d0b8fb7a81954.jpg"
+                alt="" height="182px" width="200px">
+            <h3>Chocolate Lava Shake</h3>
+        </div>
+        <div class="bestmeals
+                "><img src="https://www.modernhoney.com/wp-content/uploads/2018/08/Homemade-Chocolate-Ice-Cream-1.jpg"
+                width="200px" height="182px">
+            <h3>Chocolate Ice-Cream</h3>
+        </div>
+        <div class="bestmeals
+                "><img src="https://goodcheapeats.com/wp-content/uploads/2021/05/Chocolate-Donuts-16-square-1.jpg"
+                alt="" height="182px" width="200px">
+            <h3>Chocolate Donuts</h3>
+        </div>
+
+    </div>
+
+    </div>
+    <div>
+        <!-- FOOD MENU -->
+        <section id="menu-bg"><h1 id="our-menu">Our Menu</h1>
+    </div>
+    <div id="food-menu">
+        <div class="menu">
+            <img src="https://funmoneymom.com/wp-content/uploads/2021/03/Chocolate-Milkshake-square.jpg" alt="">
+            <h3>Chocolate Milkshake</h3>
+        </div>
+        <div class="menu">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-nGIdjXy0qVSjToZGLN9DzVU-t6yW0gXhMNj1Vn-IcvC7NzAr_2XujrcRyJlzFayp0s&usqp=CAU"
+                alt="">
+            <div>
+                <h3>Cold Coffee</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://hirasweets.com/wp-content/uploads/2020/06/Hot-coffee.jpg" alt="">
+            <div>
+                <h3>Cappuccino</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://coffeeaffection.com/wp-content/uploads/2021/04/mocha-cappuccino-500x500.jpg" alt="">
+            <div>
+                <h3>Hot Chocolate</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://static.toiimg.com/thumb/75758092.cms?imgsize=1439590&width=509&height=340" alt="">
+            <div>
+                <h3>Truffle Cake </h3>
+            </div>
+        </div>
+
+        <div class="menu">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQone0R23wCaPIDzYE15nzl2mlhQPmGrAbtdQ&usqp=CAU"
+                alt="">
+            <div>
+                <h3>Oreo Shake </h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://cakeity.com/wp-content/uploads/2021/02/extravagant-black-forest-pastry-A_0.jpg" alt="">
+            <div>
+                <h3>Black Forest</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://www.foodandwine.com/thmb/PBjYB846GpTv5DXiLuOoz0j_ho0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/molten-chocolate-cake-FT-RECIPE0220-0778308bb6104cf0970d0b8fb7a81954.jpg"
+                alt="">
+            <div>
+                <h3>Chocolate Lava Cake</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://www.modernhoney.com/wp-content/uploads/2018/08/Homemade-Chocolate-Ice-Cream-1.jpg" alt="">
+            <div>
+                <h3>Chocolate Ice-Cream
+                </h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://goodcheapeats.com/wp-content/uploads/2021/05/Chocolate-Donuts-16-square-1.jpg" alt="">
+            <div>
+                <h3>Chocolate Donuts</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://img.freepik.com/free-photo/croissants-wooden-cutting-board_1150-28480.jpg?w=2000" alt="">
+            <div>
+                <h3>Croissant</h3>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="https://www.shugarysweets.com/wp-content/uploads/2021/01/chocolate-macarons-recipe.jpg" alt="">
+            <div>
+                <h3>Chocolate Macarons</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- contact us section -->
+<div class="contact-us">
+<div class="contact-heading">
+    <h1>Contact us</h1>
+</div>
+<div class="" >
+    <form class="form-contact">
+        <div id="name-email"><input type="text" name="your name" id="" placeholder="Enter Your Name">
+        <input type="text" name="your name" id="" placeholder="Enter Your email">
+    </div>
+        <input type="text" name="your name" id="subject" placeholder="subject">
+        <textarea name="your message" id="contact-textarea" cols="30" rows="10"></textarea>
+        <input type="button" value="Submit Now">
+    </form>
+</div>
+</div>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="footer-list">
+            <h4>Brook farm cafe</h4>
+          <div> <p> Opening hours:– <br> Tuesday – Saturday: 10 am – 6 pm
+<br> Sunday: 11 am – 5 pm <br>
+       </p> </div>
+<p> Address: 194 Kensington Park <br> Road, London, United Kingdom</p>
+<div><p>phone- +44 1234 2345 678</p></div>
+<div><p>Email- brookfarmcafe@info.com</p></div>
+        </div>
+        <div class="footer-list">
+            <h4>About us</h4>
+            <ul>
+                <li><a href="#">Our blog</a> </li>
+                <li><a href="#"> Career</a> </li>
+                <li><a href="#"> sponsorships</a></li>
+                <li><a href="#">Services</a> </li>
+            </ul>
+        </div>
+        <div class="footer-list" id="socials">
+            <h4>Social Media</h4>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            
+        </div>
+        <div class="footer-list">
+            <h4>Our Newsletter</h4>
+           <form action="backend.php" class="footer-form">
+            <input type="email" name="" id="footer-email" placeholder="Enter Your Email Address">
+            <input type="submit" value="Sign up" id="footer-submit">
+           </form>
+        </div>
+    </div>
+</footer>
+<section class="copyright">
+  <p>
+        Copyright &copy; <strong>Brook Farm Cafe </strong> All Rights Reserved </p> </section>
+ <section id="credit"><p>Designed by Sagar Kainth</p> </section>
+</body>
+
+</html>
